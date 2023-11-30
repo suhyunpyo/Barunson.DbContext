@@ -1,0 +1,71 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
+
+namespace Barunson.DbContext.DbModels.MoSvr;
+
+[Keyless]
+public partial class V_MMS_HIST_RV
+{
+    public int MSG_KEY { get; set; }
+
+    [StringLength(16)]
+    [Unicode(false)]
+    public string IN_TIME { get; set; } = null!;
+
+    [StringLength(16)]
+    [Unicode(false)]
+    public string? SERVICE_CODE { get; set; }
+
+    public int? MSG_TYPE { get; set; }
+
+    [StringLength(32)]
+    [Unicode(false)]
+    public string CALLER_NO { get; set; } = null!;
+
+    [StringLength(32)]
+    [Unicode(false)]
+    public string CALLEE_NO { get; set; } = null!;
+
+    [StringLength(32)]
+    [Unicode(false)]
+    public string? CALLBACK_NO { get; set; }
+
+    [StringLength(128)]
+    [Unicode(false)]
+    public string? SUBJECT { get; set; }
+
+    [StringLength(3000)]
+    [Unicode(false)]
+    public string? MMS_MSG { get; set; }
+
+    [StringLength(256)]
+    [Unicode(false)]
+    public string? IMAGE1 { get; set; }
+
+    [StringLength(256)]
+    [Unicode(false)]
+    public string? IMAGE2 { get; set; }
+
+    [StringLength(256)]
+    [Unicode(false)]
+    public string? IMAGE3 { get; set; }
+
+    [StringLength(256)]
+    [Unicode(false)]
+    public string? AUDIO { get; set; }
+
+    [StringLength(256)]
+    [Unicode(false)]
+    public string? VIDEO { get; set; }
+
+    public int? RV_SECT { get; set; }
+
+    public int? READ_FLAG { get; set; }
+
+    [StringLength(16)]
+    [Unicode(false)]
+    public string SUBMIT_TIME { get; set; } = null!;
+}
